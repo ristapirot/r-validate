@@ -1,24 +1,18 @@
 var rValidate = new RValidate
 
-
-
-var options = {
-    'inp': {
-        invalid: true,
-        text: '',
+rValidate.addOption([
+    {
+        class: 'number',
+        required: true
+    }, {
+        class: 'email',
+        required: true
+    }, {
+        class: 'password',
         required: true,
-        minLength: 10
-    }, 
-    'email': {
-        invalid: true,
-        required: true,
-        text: ''
-    },
-    'number': {
-        invalid: true,
-        required: true,
-        text: ''
+        minLength: 8
+    }, {
+        class: 'c-password',
+        required: true
     }
-}
-
-rValidate.addOption(options)
+])
